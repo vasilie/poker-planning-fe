@@ -1,0 +1,85 @@
+.card {
+  width: 35px;
+  height: 65px;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: all 100ms;
+  position: relative;
+  top: 0px;
+  &.selection {
+    margin: 10px 20px;
+    cursor: pointer;
+    &.selected {
+      top: -15px;
+      background:rgb(64, 172, 64);
+      color: white;
+    }
+  }
+
+  &.display {
+    position: absolute;
+    background-color: #000000;
+    opacity: 0.8;
+    background-image:  linear-gradient(30deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(150deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(30deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(150deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(60deg, #ff9a4277 25%, transparent 25.5%, transparent 75%, #ff9a4277 75%, #ff9a4277), linear-gradient(60deg, #ff9a4277 25%, transparent 25.5%, transparent 75%, #ff9a4277 75%, #ff9a4277);
+    background-size: 16px 28px;
+    background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px;
+    
+    border: 3px solid white;
+
+    &:nth-child(1){
+      bottom: -100px;
+      left: 110px;
+      top: auto;
+    }
+    &:nth-child(2){
+      top: -120px;
+      left: 110px;
+    }
+    &:nth-child(3){
+      top: -120px;
+      left: 210px;
+    }
+    &:nth-child(4){
+      bottom: -100px;
+      left: 210px;
+      top: auto;
+    }
+    &:nth-child(5){
+      bottom: -100px;
+      left: 310px;
+    }
+    &:nth-child(6){
+      top: -120px;
+      left: 310px;
+      top: auto;
+    }
+    &:nth-child(7){
+      top: -120px;
+      left: 10px;
+    }
+    &:nth-child(8){
+      bottom: -100px;
+      left: 10px;
+      top: auto;
+    }
+  }
+}
+
+.card-name {
+  
+  position: relative;
+  left: 50%;
+  width: max-content;
+  transform: translateX(-50%);
+  text-align: center;
+  font-weight: 500;
+}
+.selection .card-name {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.display .card-name {
+  margin-top: 70px;
+}

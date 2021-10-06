@@ -1,0 +1,19 @@
+.table {
+  margin-top: 200px;
+  margin-bottom: 150px;
+  width: 350px;
+  height: 250px;
+  background-color: rgb(65, 172, 65);
+  border-radius: 33px;
+  position: relative;
+  opacity: 1;
+
+}
+.table-info {
+  color: white;
+  font-weight: 800;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
