@@ -15,7 +15,7 @@ import {
 
 export const SocketContext = createContext();
 
-const socketUrl = "http://vasilie.net:3231";
+const socketUrl = "http://localhost:3231";
 
 function SocketProvider({ children }) {
   const history = useHistory();
@@ -51,7 +51,7 @@ function SocketProvider({ children }) {
     // and other users connect to his room via link. Since socket is created in this function, users 
     // that are not the host must use createSocket function and call it after joining 
 
-    const socket = io(socketUrl);
+    const socket = io(socketUrl, {transports: ['websocket', 'polling', 'flashsocket']});
     
     socket.on('connect', () => { 
       console.log("connected");
