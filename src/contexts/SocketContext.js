@@ -15,7 +15,7 @@ import {
 
 export const SocketContext = createContext();
 
-const socketUrl = "http://localhost:3231";
+const socketUrl = "http://vasilie.net:3231";
 
 function SocketProvider({ children }) {
   const history = useHistory();
