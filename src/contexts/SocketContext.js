@@ -25,7 +25,6 @@ function SocketProvider({ children }) {
   const [averageScore, setAverageScore] = useState(null);
   const [valuesAgreement, setValuesAgreement] = useState([]);
   const [maxPercentage, setMaxPercentage] = useState(null);
-  const [intervalId, setIntervalId] = useState(0);
   
   const [cardValue, setCardValue] = useState(null);
   const [selectedCard, setSelectedCard] = useState(null);
@@ -61,8 +60,8 @@ function SocketProvider({ children }) {
     setIsHost(true);  
   }
 
-  const createSocket = (roomId) => {
-    const socket = io(socketUrl);
+  const createSocket = () => {
+    const socket = io(socketUrl, {transports: ['websocket', 'polling', 'flashsocket']});
     
     socket.on('connect', () => { 
       console.log("connected");
