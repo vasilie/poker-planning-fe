@@ -7,7 +7,13 @@
   border-radius: 33px;
   position: relative;
   opacity: 1;
-
+  .average-score {
+    color: white;
+    text-align: center;
+    margin-top: 110px;
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 .table-info {
   color: white;

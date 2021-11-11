@@ -4,6 +4,28 @@
   text-align: center;
   cursor: pointer;
   padding: 10px 5px;
+  &.card-style-button {
+    width: 196px;
+  }
+  &.host-buttons {
+    border: none;
+    background: #eeeeee;
+    color: #333;
+    position: fixed;
+    font-weight: 400;
+    &.reveal-cards {
+      left: 10px;
+      bottom: 135px;
+    }
+    &.new-round {
+      left: 162px;
+      bottom: 135px;
+    }
+    &.inactive {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
   &:active {
     background: #333;
     color: white;

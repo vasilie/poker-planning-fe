@@ -4,7 +4,7 @@
   border-radius: 8px;
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  transition: all 100ms;
+  transition: top 100ms;
   position: relative;
   top: 0px;
   &.selection {
@@ -19,14 +19,114 @@
 
   &.display {
     position: absolute;
-    background-color: #000000;
-    opacity: 0.8;
-    background-image:  linear-gradient(30deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(150deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(30deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(150deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(60deg, #ff9a4277 25%, transparent 25.5%, transparent 75%, #ff9a4277 75%, #ff9a4277), linear-gradient(60deg, #ff9a4277 25%, transparent 25.5%, transparent 75%, #ff9a4277 75%, #ff9a4277);
-    background-size: 16px 28px;
-    background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px;
-    
-    border: 3px solid white;
-
+    background-color: #eaeaea;
+    border: 3px solid #eaeaea;
+    &.chosen {
+      background-color: #000000;
+      opacity: 0.8;
+      background-image:  linear-gradient(30deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(150deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(30deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(150deg, #ff9a42 12%, transparent 12.5%, transparent 87%, #ff9a42 87.5%, #ff9a42), linear-gradient(60deg, #ff9a4277 25%, transparent 25.5%, transparent 75%, #ff9a4277 75%, #ff9a4277), linear-gradient(60deg, #ff9a4277 25%, transparent 25.5%, transparent 75%, #ff9a4277 75%, #ff9a4277);
+      background-size: 16px 28px;
+      background-position: 0 0, 0 0, 8px 14px, 8px 14px, 0 0, 8px 14px;
+      border: 3px solid white;
+      &.card-style-selected {
+        outline: 1px solid #333;
+      }
+      &.parrot {
+        background-image: url(https://cultofthepartyparrot.com/parrots/hd/slowparrot.gif);
+        background-size: 20px;
+        background-color: #847ce8;
+      }
+      &.async-parrot {
+        background-image: url(https://cultofthepartyparrot.com/parrots/asyncparrot.gif);
+        background-size: 23px;
+        background-color: #ffef3c;
+      }
+      &.laptop-parrot {
+        background-image: url(https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif);
+        background-size: 23px;
+        background-color: #3ce2ff;
+      }
+      &.geib {
+        background-color: #ffffff;
+        background: none;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          top: -50%;
+          left: -50%;
+          z-index: -1;
+          background: url(https://www.geib-it.de/wp-content/uploads/2019/08/logo-1.png) 4px 49px no-repeat;
+          transform: rotate(90deg);
+          background-size: 48px;
+          pointer-events: none;
+        }
+      }
+      &.burning-parrot {
+        background-image: url(https://cultofthepartyparrot.com/parrots/hd/everythingsfineparrot.gif);
+        background-size: 25px;
+        background-color: #ffd90d;
+      }
+      &.zordon {
+        background-image: url(https://static.wikia.nocookie.net/powerrangers/images/6/62/Zordon.jpg);
+        background-size: 57px 35px;
+        background-color: #000;
+        background-position: -13px;
+        background-repeat: no-repeat;
+      }
+      &.sns {
+        background:none;
+        background-size: 57px 35px;
+        background-color: #fff;
+        background-position: -13px;
+        background-repeat: no-repeat;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 200%;
+          height: 200%;
+          top: -50%;
+          left: -50%;
+          z-index: -1;
+          background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f4/Flag_of_the_Serbian_Progressive_Party.svg/1200px-Flag_of_the_Serbian_Progressive_Party.svg.png) 5px 44px no-repeat;
+          transform: rotate(90deg);
+          pointer-events: none;
+          background-size: 47px;
+        }
+      }
+      &.hypno-parrot {
+        background-image: url(https://cultofthepartyparrot.com/parrots/hd/hypnoparrot.gif);
+        background-size: 30px;
+        background-color: #94ff54;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      &.polka {
+        background-color: #000000;
+        opacity: 0.7;
+        background-image: radial-gradient(#ff1010 0.75px, transparent 0.75px), radial-gradient(#ff1010 0.75px, #000000 0.75px);
+        background-size: 20px 20px;
+        background-position: 3px 3px,13px 13px;
+      }
+      &.zigzag {
+        background-color: #60ced3;
+        opacity: 0.7;
+        background-image:  linear-gradient(135deg, #ffffff 25%, transparent 25%), linear-gradient(225deg, #ffffff 25%, transparent 25%), linear-gradient(45deg, #ffffff 25%, transparent 25%), linear-gradient(315deg, #ffffff 25%, #60ced3 25%);
+        background-position:  15px 0, 15px 0, 0 0, 0 0;
+        background-size: 30px 30px;
+        background-repeat: repeat;
+      }
+      &.psycho {
+        background-color: #000000;
+        opacity: 0.7;
+        background-image: linear-gradient(-45deg, #000000, #000000 50%, #306a84 50%, #306a84);
+        background-size: 12px 12px;
+      }
+    }
+    &.reveal {
+      border: 2px solid #333;
+    }
     &:nth-child(1){
       bottom: -100px;
       left: 110px;
@@ -52,22 +152,40 @@
     &:nth-child(6){
       top: -120px;
       left: 310px;
-      top: auto;
     }
     &:nth-child(7){
       top: -120px;
       left: 10px;
     }
     &:nth-child(8){
-      bottom: -100px;
-      left: 10px;
+      bottom: -120px;
       top: auto;
     }
   }
 }
+.card-style-selector {
+  background: #eaeaea;
+  display: flex;
+  width: 196px;
+  height: 240px;
+  margin-bottom: 20px;
+  padding: 10px 8px;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+ .card.display.chosen {
+  position: static;
+  margin: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+ }
+}
+
+.card-style-selector::-webkit-scrollbar {
+  display: none;
+}
 
 .card-name {
-  
   position: relative;
   left: 50%;
   width: max-content;
@@ -82,4 +200,15 @@
 
 .display .card-name {
   margin-top: 70px;
+}
+.display.reveal .card-name {
+  margin-top: 20px;
+}
+
+.card-style-selector {
+  .geib, .sns {
+    position: relative !important;
+    top: 0 !important;
+    left: 0  !important;
+  }
 }

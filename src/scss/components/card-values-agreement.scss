@@ -1,0 +1,51 @@
+.card-values-agreement {
+  width: 200px;
+}
+.card-values-item {
+  width: 125px;
+  position: relative;
+  margin-bottom: 19px;
+  p {
+    border: 2px solid #333;
+    display: flex;
+    width: 19px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+    padding-top: 1px;
+    line-height: 19px;
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}
+
+.card-values-percentage {
+    position: absolute;
+    font-size: 15px;
+    bottom: 0px;
+    right: 0;
+}
+
+.card-values-wrapper {
+  position: absolute;
+  top: 200px;
+  left: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-left: 275px;
+}
+
+.card-values-display-background {
+  background-color: #eaeaea;;
+  width: 100%;
+  position: absolute;
+  border-radius: 5px;
+  height: 5px;
+}
+
+.card-values-display-foreground {
+  background-color: #333;
+  position: absolute;
+  border-radius: 5px;
+  height: 5px;
+}

@@ -8,12 +8,11 @@ function Home(){
 
   const handleCreateRoom = () => {
     createRoom();
-    console.log("WWAJA");
   }
 
   return (
-    <div className='wrapper'>
-      <Button onClick={handleCreateRoom}>Create a Room</Button>
+    <div className='wrapper home'>
+      <Button className="button host-buttons" onClick={handleCreateRoom}>Create a Room</Button>
     </div>
   )
 }

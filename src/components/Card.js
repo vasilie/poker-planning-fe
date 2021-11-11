@@ -1,4 +1,16 @@
-function Card({name, selection, selected, value, handleSelection}) {
+import { cardStyles } from "./cardStyles";
+
+function Card({name, selection, selected, value, handleSelection, cardValue, isReveal, cardStyles, cardStyleSelected, onClick}) {
+  const isCardChoosen = !!cardValue;
+
+  if (isReveal){    
+    return (
+      <div className={`card display reveal`}>
+        <div className='card-name'>{cardValue}</div>
+      </div>
+    )
+  }
+
   if (selection){
     return (
       <div onClick={() => handleSelection(value)} className={`card selection ${selected ? "selected": ""}`}>
@@ -7,7 +19,7 @@ function Card({name, selection, selected, value, handleSelection}) {
     )
   } else {
     return (
-      <div className={`card display`}>
+      <div onClick={onClick} className={`card display ${isCardChoosen ? "chosen": ""} ${cardStyles} ${cardStyleSelected ? "card-style-selected" : ""}`}>
         <div className='card-name'>{name}</div>
       </div>
     )
@@ -17,6 +29,7 @@ function Card({name, selection, selected, value, handleSelection}) {
 Card.defaultProps = {
   name: "",
   selection: false,
+  cardStyles: false,
   value: 0
 }
 

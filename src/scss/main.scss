@@ -2,8 +2,13 @@
 @import "./base/typo";
 @import "./base/helpers";
 
+@import "./components/home";
 @import "./components/room";
 @import "./components/button";
 @import "./components/table";
 @import "./components/card";
 @import "./components/card-selection-module";
+@import "./components/card-values-agreement";
+@import "./components/progress-circle";
+@import "./components/username-selector";
+@import "./components/result";
