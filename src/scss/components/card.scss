@@ -193,6 +193,7 @@
   text-align: center;
   font-weight: 500;
 }
+
 .selection .card-name {
   margin-top: 20px;
   font-size: 18px;
@@ -203,6 +204,10 @@
 }
 .display.reveal .card-name {
   margin-top: 20px;
+}
+
+.display.reveal .name-reveal {
+  margin-top: 26px;
 }
 
 .card-style-selector {

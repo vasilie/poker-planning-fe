@@ -10,7 +10,6 @@ import {
   GAME_STATE_ALL_CARDS_CHOOSEN,
   GAME_STATE_NEW_ROUND,
   NEW_CARD_VALUE
-
 } from "./constants";
 
 export const SocketContext = createContext();
@@ -74,7 +73,7 @@ function SocketProvider({ children }) {
     setCardValue(value);
     socket.emit(NEW_CARD_VALUE, { cardValue: value });
   }
-  
+
   const revealCards = () => {
     socket.emit(GAME_STATE_REVEALING_CARDS, true );
   }

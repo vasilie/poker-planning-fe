@@ -26,7 +26,7 @@ function CardSelectionModule(){
 
   return (
     <div className='card-selection-wrapper'>
-      {cardOptions.map(value => <Card handleSelection={handleSelection} selection selected={selectedCard === value} value={value} />)}
+      {cardOptions.map(value => <Card key={`${value}card`} handleSelection={handleSelection} selection selected={selectedCard === value} value={value} />)}
     </div>
   )
 }

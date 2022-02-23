@@ -3,15 +3,15 @@ import Card from '../components/Card';
 import { SocketContext } from '../contexts/SocketContext';
 
 function Table({usernames, isReveal}) {
-  const { cardValue, countdown, counting, averageScore, cardStyle } = useContext(SocketContext);
+  const { cardValue, countdown, counting, averageScore } = useContext(SocketContext);
 
   return (
-    <div className='table'>
+    <div className='table'>   
       {!isReveal && <div className='table-info'>{cardValue ? "Wait for card reveal" : "Choose a card"}</div>}
       {counting && <div className='table-info'>{countdown}</div>}
       {isReveal && !counting && <div className="average-score">Average score: <b>{averageScore}</b></div>}
       <div>
-        {usernames.map(({username, cardValue})=><Card cardStyles={cardStyle} name={username} isReveal={isReveal && !counting} cardValue={cardValue} />)}
+        {usernames.map(({ username, cardValue, cardStyle }) => <Card key={`${username}-table-card`} cardStyles={cardStyle} name={username} isReveal={isReveal && !counting} cardValue={cardValue} />)}
       </div>
 
      </div>

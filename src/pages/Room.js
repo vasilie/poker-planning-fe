@@ -35,7 +35,7 @@ function Room(){
   }, [socket]);
 
   const handleUsername = (e) => {
-    socket.emit("new user", { username: usernameInput, roomId: id, cardValue: null }, function(data){
+    socket.emit("new user", { username: usernameInput, roomId: id, cardValue: null, cardStyle }, function (data) {
       console.log(data);
       console.log('emmited');
     });
@@ -81,7 +81,7 @@ function Room(){
           </div>
           <label>Select Card Style</label>
           <div className="card-style-selector">
-            {cardStyles.map(card => <Card cardStyleSelected={card === cardStyle} cardValue={true} onClick={() => setCardStyle(card)} cardStyles={card}/>)}
+              {cardStyles.map((card, i) => <Card key={`${i}card`} cardStyleSelected={card === cardStyle} cardValue={true} onClick={() => setCardStyle(card)} cardStyles={card} />)}
           </div>  
           <input className="button host-buttons card-style-button" type="submit"></input>
         </form>

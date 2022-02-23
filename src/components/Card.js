@@ -7,6 +7,7 @@ function Card({name, selection, selected, value, handleSelection, cardValue, isR
     return (
       <div className={`card display reveal`}>
         <div className='card-name'>{cardValue}</div>
+        <div className='card-name name-reveal'>{name}</div>
       </div>
     )
   }
