@@ -43,8 +43,12 @@ function Room(){
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!usernameInput || !cardStyle){
-      alert("Username or card style not chosen"+username+cardStyle)
+    if (!usernameInput) {
+      alert("Username not chosen")
+      return;
+    }
+    if (!cardStyle) {
+      alert("Card style not chosen")
       return;
     }
     setUsername(usernameInput);
