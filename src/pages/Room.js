@@ -77,7 +77,7 @@ function Room(){
   if (!username){
     return (
     <div className="room">
-      <div className="username-selector">
+      <div className="form">
         <form onSubmit={handleSubmit}>
           <div>
             <label>Username</label>

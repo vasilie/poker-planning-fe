@@ -1,0 +1,14 @@
+header {
+	height: 50px;
+	background: #eeeeee;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	
+	ul {
+		li {
+			display: inline;
+			margin-right: 20px;
+		}
+	}
+}

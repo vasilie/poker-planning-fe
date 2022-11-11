@@ -1,5 +1,5 @@
-.username-selector {
-  margin-top: 200px;
+.form {
+  // margin-top: 200px;
   label {
     display: block;
     margin-bottom: 7px;
@@ -9,5 +9,9 @@
     border: none;
     background-color: #eee;
     padding: 2px 5px;
+  }
+  .form-item {
+    display: flex;
+    flex-direction: column;
   }
 }
