@@ -31,7 +31,6 @@ function Room(){
         setUsernames(data)
       });
     }
-    
   }, [socket]);
 
   const handleUsername = (e) => {

@@ -7,7 +7,6 @@ import Router from "./components/Router";
 import SocketProvider from "./contexts/SocketContext";
 
 function App() {
-
   return (
     <div className="App">
       <BrowserRouter>

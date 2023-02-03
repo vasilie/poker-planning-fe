@@ -14,7 +14,7 @@ import {
 
 export const SocketContext = createContext();
 
-const socketUrl = "http://vasilie.net:3231";
+const socketUrl = `${process.env.REACT_APP_URL}:${process.env.REACT_APP_SOCKET_PORT}`;
 
 function SocketProvider({ children }) {
   const history = useHistory();

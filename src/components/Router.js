@@ -1,14 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Room from "../pages/Room";
+import identify from "../lib/uniq";
 import { SocketContext } from "../contexts/SocketContext";
 
 const GenericNotFound = () => <div>Not Found</div>;
 
+
 const Router = () => {
   const { socket } = useContext(SocketContext);
+
+  useEffect(() => {
+    identify();
+  }, []);
+  
   return (
     <>
       <Switch>
