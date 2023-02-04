@@ -1,4 +1,4 @@
-# Poker Planning
+# Poker Planning FE
 
 ## Available Scripts
 
