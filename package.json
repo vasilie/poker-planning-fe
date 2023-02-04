@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-production": "pm2 serve build 42069 --spa --name poker-planning-fe",
+    "start-production": "pm2 serve build 42069 -f --spa --name poker-planning-fe",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
